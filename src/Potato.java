@@ -8,11 +8,11 @@ public class Potato extends Vegetable {
     public int getCurrentValue() {
 
         // It's growing for the first 10 seconds,
-        if (isBetween(getTimeSincePlanting(), 0, 10)) {
+        if (isBetween(getTimeSincePlanting(), 0, 9)) {
             return 0;
         }
         // It's worth 5 after that.
-        if (isBetween(getTimeSincePlanting(), 11, Integer.MAX_VALUE)) {
+        if (isBetween(getTimeSincePlanting(), 10, Integer.MAX_VALUE)) {
             return 5;
         }
 

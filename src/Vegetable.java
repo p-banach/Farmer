@@ -5,28 +5,32 @@ public abstract class Vegetable {
     private int timeSincePlanting;
     private VegetableEnum.VegEnum vegEnum;
 
-    public Vegetable(VegetableEnum.VegEnum vegEnum, int costOfPlanting) {
+    Vegetable(VegetableEnum.VegEnum vegEnum, int costOfPlanting) {
         this.vegEnum = vegEnum;
         this.costOfPlanting = costOfPlanting;
     }
 
-    public static boolean isBetween(int x, int lower, int upper) {
+    static boolean isBetween(int x, int lower, int upper) {
         return lower <= x && x <= upper;
     }
 
-    public int getTimeSincePlanting() {
+    int getTimeSincePlanting() {
         return timeSincePlanting;
+    }
+
+    public void setTimeSincePlanting(int timeSincePlanting) {
+        this.timeSincePlanting = timeSincePlanting;
     }
 
     public int getCostOfPlanting() {
         return costOfPlanting;
     }
 
-    protected void setFinalValue(int finalValue) {
+    void setFinalValue(int finalValue) {
         this.finalValue = finalValue;
     }
 
-    public void setFinalValue() {
+    public void saveFinalValue() {
         this.finalValue = getCurrentValue();
     }
 

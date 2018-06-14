@@ -5,14 +5,14 @@ public class Onion extends Vegetable {
         super(vegEnum, 1);
     }
 
-    public int getCurrentValue(){
+    public int getCurrentValue() {
         // Onions stay fresh up to a year,
         // so their value is constant
         return 1;
     }
 
     @Override
-    public void setFinalValue(){
+    public void saveFinalValue() {
         super.setFinalValue(1);
     }
 }
